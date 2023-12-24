@@ -15,15 +15,15 @@ const validateInput = (inputObj) => {
   );
 
   if (!username || !password) {
-    window.alert("กรุณากรอกชื่อผู้ใช้และรหัสผ่าน");
+    window.alert("กรุณากรอก username และ password");
   } else if (!foundUser) {
     if (!users.some((user) => user.username === username)) {
-      window.alert("ชื่อผู้ใช้ไม่ถูกต้อง");
+      window.alert("username ไม่ถูกต้อง");
     } else {
-      window.alert("รหัสผ่านไม่ถูกต้อง");
+      window.alert("password ไม่ถูกต้อง");
     }
   } else {
-    window.alert("เข้าสู่ระบบสำเร็จ!");
+    window.alert("Login successful!");
     window.location.href = "https://www.example.com";
   }
 };
